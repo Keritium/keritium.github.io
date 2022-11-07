@@ -14,10 +14,10 @@ const f= gE("f");
 
 
 f.addEventListener("click", () => {
-alert('making request');
+document.write('making request');
 fetch("http://krtl.top")
 .then(it=>it.text())
-.then(it=>alert(it));
+.then(it=>document.write(it));
 
 });
 

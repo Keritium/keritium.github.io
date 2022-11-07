@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+<title>Test</title>
+<script type="module">
+function gE(id) {
+return document.getElementById(id);
+}
+
+const d = gE("d");
+const f= gE("f");
+
+
+f.addEventListener("click", () => {
+alert('making request');
+fetch("http://krtl.top")
+.then(it=>it.text())
+.then(it=>alert(it));
+
+});
+
+</script>
+</head>
+<body>
+<div id="d"></div>
+<button id="f">Make a cross-origin request</button>
+<button onclick="location.href='https://krtl.top'">Redirect</button>
+</body>
+</html>

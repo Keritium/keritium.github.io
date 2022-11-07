@@ -16,7 +16,8 @@ const f= gE("f");
 f.addEventListener("click", () => {
 alert('making request');
 fetch("http://krtl.top")
-.then(it=>alert(JSON.stringify(it)));
+.then(it=>it.text())
+.then(it=>alert(it));
 
 });
 

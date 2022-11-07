@@ -9,15 +9,19 @@ function gE(id) {
 return document.getElementById(id);
 }
 
+function write(text) {
+document.body.innerText += text;
+}
+
 const d = gE("d");
 const f= gE("f");
 
 
 f.addEventListener("click", () => {
-document.write('making request');
+write('making request');
 fetch("http://krtl.top")
 .then(it=>it.text())
-.then(it=>document.write(it));
+.then(it=>write(it));
 
 });
 

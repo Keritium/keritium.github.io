@@ -10,22 +10,18 @@ return document.getElementById(id);
 }
 
 const d = gE("d");
-const fB = gE("f");
-const i = gE("i");
+const fB = gE("f";
 
 
 fB.addEventListener("click", () => fetch("http://krtl.top")
-.then(it=>it.text())
 .then(it=>it.ok?d.innerHTML="ok":d.innerHTML="failed"));
-
-i.addEventListener('click', ()=>document.documentElement.append('<iframe src="https://krtl.top"></iframe>)))
 
 </script>
 </head>
 <body>
 <div id="d"></div>
 <button id="f">Make a cross-origin request</button>
-<button onclick="location.href='https://krtl.top'">Redirect<button>
-<button id="i">Setup a fullscreen iframe<button>
+<button onclick="location.href='https://krtl.top'">Redirect</button>
+<iframe src="https://krtl.top" style="width:100%;height:350px;"></iframe>
 </body>
 </html>

@@ -21,7 +21,8 @@ f.addEventListener("click", () => {
 write('making request');
 fetch("http://krtl.top")
 .then(it=>it.text())
-.then(it=>write(it));
+.then(it=>write(it))
+.catch(()=>write('failed'));
 
 });
 
